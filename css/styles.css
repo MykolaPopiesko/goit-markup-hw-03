@@ -1,15 +1,13 @@
-*,
+/**,
 *::before,
 *::after {
   box-sizing: border-box;
-}
+}*/
 
-:root {
-  --main-color: #757575; /* links nav, text,*/
-  --background-main-color: #ffffff; /* background nav, hero title, title button,footer adress */
-  --second-color: #212121; /*titles nav,titles , */
-  --accent-color: #2196f3; /* links hover focus,*/
-  --background-second-color: #2f303a; /*background */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 h1,
@@ -17,7 +15,14 @@ h2,
 h3,
 p,
 ul {
-  margin: 0;
+  margin: 0px;
+}
+:root {
+  --main-color: #757575; /* links nav, text,*/
+  --background-main-color: #ffffff; /* background nav, hero title, title button,footer adress */
+  --second-color: #212121; /*titles nav,titles , */
+  --accent-color: #2196f3; /* links hover focus,*/
+  --background-second-color: #2f303a; /*background */
 }
 
 body {
@@ -34,8 +39,8 @@ ul {
 }
 .container {
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -46,18 +51,51 @@ ul {
 }
 .header {
   background-color: var(--background-main-color);
+  max-width: 1600px;
+  min-height: 80px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
 }
 
+.div-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+.adr-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.adr-list {
+  display: flex;
+  align-items: center;
+}
 /*логотип*/
 
 .nav-logo {
+  display: block;
+  margin-top: 24px;
+  margin-bottom: 25px;
+  margin-right: 93px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--second-color);
-  text-decoration: none;
 }
 .span-logo {
   color: var(--accent-color);
@@ -101,8 +139,18 @@ a {
 
 .hero {
   background-color: var(--background-second-color);
+  display: block;
+  text-align: center;
+  max-width: 1600px;
+  max-height: 600px;
+  border: 1px solid currentColor;
 }
 .hero-one {
+  display: block;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 70px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -111,6 +159,13 @@ a {
 }
 
 .hero-button {
+  margin-bottom: 200px;
+  width: 200px;
+  height: 50px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -122,11 +177,20 @@ a {
 }
 
 /* секция-текст */
-
 .content {
   background-color: var(--background-main-color);
 }
+
+.content-list {
+  display: flex;
+  padding-left: 0px;
+}
+.content-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .content-title {
+  margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -140,18 +204,58 @@ a {
 }
 .action-title,
 .group-title {
+  margin-bottom: 50px;
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--second-color);
 }
+.action-list {
+  display: flex;
+  padding-left: 0px;
+}
+
+.action-item:not(:last-child),
+.group-item:not(:last-child) {
+  margin-right: 30px;
+}
 /*наша команда*/
 
 .group {
   background-color: #f5f4fa;
 }
+.group-list {
+  display: flex;
+  padding-left: 0px;
+}
+.group-sign {
+  display: block;
+
+  padding-top: 30px;
+
+  padding-bottom: 30px;
+
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #eeeeee;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeeeee;
+
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #eeeeee;
+
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: var(--background-main-color);
+}
 .group-name {
+  text-align: center;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
@@ -160,6 +264,7 @@ a {
 }
 
 .group-position {
+  text-align: center;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -168,6 +273,9 @@ a {
 /* футер */
 
 .footer-logo {
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -185,7 +293,13 @@ a {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
-
+.footer-list {
+  display: block;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 60px;
+  padding-left: 0px;
+}
 .footer-office {
   color: var(--background-main-color);
 }
@@ -198,7 +312,10 @@ a {
   color: var(--accent-color);
 }
 .footer {
+  display: flex;
   background-color: var(--background-second-color);
+  max-width: 1600px;
+  max-height: 252px;
 }
 
 /*портфолио*/
@@ -220,17 +337,59 @@ a {
   background-color: var(--accent-color);
 }
 
+.section-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+  padding-bottom: 59px;
+}
+.section-list:not(:last-child) {
+  padding-right: 8px;
+}
 /*портфолио-галерея*/
 
 .portfolio {
   background-color: var(--background-main-color);
 }
+.portfolio-list {
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.portfolio-item {
+  display: block;
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.portfolio-item:nth-child(3n) {
+  margin-right: 0px;
+}
 .portfolio-link {
   text-decoration: none;
   color: inherit;
 }
+.portfolio-sign {
+  display: block;
 
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #eeeeee;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeeeee;
+
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #eeeeee;
+}
 .portfolio-title {
   font-style: normal;
   font-weight: 700;
@@ -247,7 +406,4 @@ a {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: var(--text-link-color);
-}
-.footer-list {
-  display: flex;
 }
