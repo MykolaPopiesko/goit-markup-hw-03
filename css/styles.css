@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #757575; /* links nav, text,*/
+  --background-main-color: #ffffff; /* background nav, hero title, title button,footer adress */
+  --second-color: #212121; /*titles nav,titles , */
+  --accent-color: #2196f3; /* links hover focus,*/
+  --background-second-color: #2f303a; /*background */
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+
+/*все списки без маркеров*/
+ul {
+  list-style: none;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.header {
+  background-color: var(--background-main-color);
+}
+
+/*логотип*/
+
+.nav-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+  text-decoration: none;
+}
+.span-logo {
+  color: var(--accent-color);
+}
+
+/*навигация-ссылки */
+a {
+  text-decoration: none;
+}
+
+.nav-link.current {
+  color: var(--accent-color);
+}
+.nav-link,
+.adr-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.nav-link {
+  color: var(--second-color);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
+.adr-link {
+  color: inherit;
+}
+
+.adr-link:hover,
+.adr-link:focus {
+  color: var(--accent-color);
+}
+
+/* Герой*/
+
+.hero {
+  background-color: var(--background-second-color);
+}
+.hero-one {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: var(--background-main-color);
+}
+
+.hero-button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--background-main-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* секция-текст */
+
+.content {
+  background-color: var(--background-main-color);
+}
+.content-title {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
+/* чем мы занимаемся-илюстрации*/
+
+.action {
+  background-color: var(--background-main-color);
+}
+.action-title,
+.group-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+/*наша команда*/
+
+.group {
+  background-color: #f5f4fa;
+}
+.group-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
+.group-position {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+/* футер */
+
+.footer-logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+.span-flogo {
+  color: var(--background-main-color);
+}
+
+.footer-adr {
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+.footer-office {
+  color: var(--background-main-color);
+}
+.footer-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
+}
+.footer {
+  background-color: var(--background-second-color);
+}
+
+/*портфолио*/
+/*кнопки*/
+
+.filter-button {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  color: inherit;
+  cursor: pointer;
+}
+.filter-button:hover,
+.filter-button:focus {
+  color: var(--background-main-color);
+  background-color: var(--accent-color);
+}
+
+/*портфолио-галерея*/
+
+.portfolio {
+  background-color: var(--background-main-color);
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--second-color);
+}
+
+.portfolio-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: var(--text-link-color);
+}
+.footer-list {
+  display: flex;
+}
